@@ -1,0 +1,50 @@
+.ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: tick 15s linear infinite;
+  @include tablet {
+    animation-duration: 8s;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 18px 30px 18px 0px;
+    background-color: var(--red);
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 22px;
+    line-height: 110%;
+    text-transform: uppercase;
+    font-family: "Merriweather", sans-serif;
+    color: white;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 12px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    @include tablet {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+@keyframes tick {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

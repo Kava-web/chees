@@ -1,0 +1,89 @@
+.hero {
+  position: relative;
+  padding: 123px 0px 190px 0px;
+  background: url("@img/hero-bg.jpg") 0 0 / cover no-repeat;
+  z-index: 1;
+  overflow: hidden;
+  @include laptop-min {
+    padding-bottom: 340px;
+  }
+  @include tablet {
+    padding: 91px 0px 326px 0px;
+  }
+  &__chees {
+    position: absolute;
+    top: -104px;
+    right: 6px;
+    z-index: -1;
+    width: 1630px;
+    max-width: none;
+    @include desktop {
+      width: 1400px;
+      top: auto;
+      bottom: -40px;
+    }
+    @include laptop {
+      width: 985px;
+      right: -80px;
+    }
+    @include laptop-min {
+      width: 765px;
+      right: 0;
+    }
+    @include mobile {
+      width: 874px;
+      bottom: 15px;
+      right: -107px;
+    }
+  }
+  &__title {
+    max-width: 545px;
+    span {
+      &:first-child {
+        padding-left: 92px;
+      }
+      &:last-child {
+        padding-left: 35px;
+      }
+    }
+    @include mobile {
+      span {
+        &:first-child {
+          padding-left: 63px;
+        }
+        &:last-child {
+          padding-left: 29px;
+        }
+      }
+    }
+  }
+  &__descr {
+    margin: 25px 0px 0px 0px;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    @include mobile {
+      text-align: left;
+    }
+  }
+  &__nav {
+    display: flex;
+    margin-top: 38px;
+    gap: 14px;
+    @include mobile {
+      margin-top: 29px;
+      flex-wrap: wrap;
+    }
+  }
+  &__nav-btn {
+    display: inline-block;
+    flex: 0 1 265px;
+    @include mobile {
+      flex-basis: 100%;
+      br {
+        display: none;
+      }
+    }
+  }
+}

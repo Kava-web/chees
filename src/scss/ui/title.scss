@@ -1,0 +1,31 @@
+.title {
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Merriweather", sans-serif;
+}
+.title-1 {
+  font-size: 60px;
+  line-height: 110%;
+  @include laptop-min {
+    font-size: 44px;
+  }
+  @include mobile {
+    font-size: 36px;
+  }
+}
+.title-2 {
+  font-size: 36px;
+  line-height: 135%;
+  span {
+    color: var(--red);
+    font-weight: 700;
+  }
+  @include laptop-min {
+    font-size: 32px;
+  }
+  @include tablet {
+    font-size: 28px;
+    line-height: 135%;
+  }
+}
