@@ -34,13 +34,13 @@ export function mediaAdaptive() {
       function (item) {
         return "(" + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
       },
-      this
+      this,
     );
     this.mediaQueries = Array.prototype.filter.call(
       this.mediaQueries,
       function (item, index, self) {
         return Array.prototype.indexOf.call(self, item) === index;
-      }
+      },
     );
 
     // навешивание слушателя на медиа-запрос

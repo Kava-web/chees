@@ -1,11 +1,11 @@
 .ticker {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  animation: tick 15s linear infinite;
-  @include tablet {
-    animation-duration: 8s;
+  overflow: hidden;
+  &__container {
+    position: relative;
+    animation: tick 15s linear infinite;
+    @include tablet {
+      animation-duration: 8s;
+    }
   }
   &__wrapper {
     display: flex;

@@ -6,17 +6,22 @@
 @import "./base/media";
 @import "./base/body-config";
 @import "./base/config-container";
+@import "./base/aos";
 
 // ui
 @import "./ui/button";
 @import "./ui/list";
 @import "./ui/title";
 @import "./ui/ticker";
+@import "./ui/slider-button";
+@import "./ui/slider-pagination";
 
 // components
 @import "./components/header";
 
 @import "./components/hero";
 @import "./components/support";
+@import "./components/stages";
+@import "./components/participants";
 
 @import "./components/footer";

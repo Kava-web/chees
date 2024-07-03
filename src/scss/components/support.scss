@@ -1,5 +1,5 @@
 .support {
-  padding: 80px 0px 200px 0px;
+  padding: 80px 0px 162px 0px;
   @include laptop {
     padding: 50px 0px 120px 0px;
   }
@@ -68,9 +68,9 @@
       transform: translateY(0);
     }
     @include mobile {
-      width: 375px;
       max-width: none;
       margin-top: 31px;
+      width: 100%;
     }
   }
   &__table-container {

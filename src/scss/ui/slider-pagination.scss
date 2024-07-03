@@ -1,0 +1,15 @@
+.slider-pagination {
+  display: flex;
+  gap: 6px;
+  .swiper-pagination-bullet {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    transition: background-color .2s ease;
+    &-active {
+      background-color: var(--mine-shaft);
+    }
+  }
+}

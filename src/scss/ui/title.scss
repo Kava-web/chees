@@ -15,6 +15,17 @@
   }
 }
 .title-2 {
+  font-size: 54px;
+  line-height: 120%;
+  @include laptop {
+    font-size: 46px;
+  }
+  @include tablet {
+    font-size: 36px;
+    line-height: 110%;
+  }
+}
+.title-3 {
   font-size: 36px;
   line-height: 135%;
   span {

@@ -1,0 +1,168 @@
+.stages {
+  padding-bottom: 200px;
+  overflow: hidden;
+  @include laptop-min {
+    padding-bottom: 120px;
+  }
+  &__head {
+    position: relative;
+    max-width: 720px;
+  }
+  &__head-descr {
+    position: absolute;
+    margin: 0;
+    max-width: 280px;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--azure);
+    bottom: 11px;
+    right: 139px;
+    @include tablet {
+      position: static;
+      margin-top: 12px;
+      font-size: 18px;
+      max-width: none;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    @include laptop-min {
+      margin-top: 185px;
+    }
+    @include mobile {
+      margin-top: 150px;
+      overflow: visible !important;
+    }
+    .swiper-wrapper {
+      margin-top: 53px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, minmax(112px, auto));
+      grid-gap: 20px;
+      @include laptop {
+        grid-template-rows: repeat(4, minmax(112px, auto));
+      }
+      @include laptop-min {
+        grid-template-rows: repeat(7, auto);
+      }
+      @include mobile {
+        display: flex;
+        grid-gap: 0;
+      }
+    }
+  }
+  &__plane {
+    position: absolute;
+    width: 400px;
+    right: -63px;
+    bottom: -2px;
+    z-index: 10;
+    @include laptop {
+      top: -190px;
+      bottom: auto;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include mobile {
+      width: 335px;
+      top: -160px;
+    }
+  }
+  &__slider-item {
+    display: flex !important;
+    align-items: start;
+    gap: 16px;
+    padding: 20px;
+    background: url("@img/hero-bg.jpg") 0 0 / cover no-repeat;
+    color: var(--mine-shaft);
+    @include laptop-min {
+      grid-column: 1 / 8 !important;
+      grid-row: auto !important;
+    }
+    @include mobile {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    &:first-child {
+      grid-area: 1 / 1 / 2 / 3;
+      @include laptop {
+        grid-area: 1 / 1 / 2 / 4;
+      }
+      @include laptop-min {
+      }
+    }
+    &:nth-child(2) {
+      grid-area: 1 / 3 / 2 / 5;
+      @include laptop {
+        grid-area: 1 / 4 / 2 / 7;
+      }
+    }
+    &:nth-child(3) {
+      grid-area: 1 / 5 / 3 / 7;
+      @include laptop {
+        grid-area: 2 / 1 / 3 / 4;
+      }
+    }
+    &:nth-child(4) {
+      grid-area: 2 / 1 / 3 / 3;
+      @include laptop {
+        grid-area: 2 / 4 / 3 / 7;
+      }
+    }
+    &:nth-child(5) {
+      grid-area: 2 / 3 / 3 / 5;
+      @include laptop {
+        grid-area: 3 / 1 / 4 / 4;
+      }
+    }
+    &:nth-child(6) {
+      grid-area: 3 / 1 / 4 / 3;
+      @include laptop {
+        grid-area: 3 / 4 / 4 / 7;
+      }
+    }
+    &:nth-child(7) {
+      grid-area: 3 / 3 / 4 / 7;
+      .stages__slider-item--content {
+        max-width: 445px;
+      }
+      @include laptop {
+        grid-area: 4 / 1 / 5 / 7;
+      }
+    }
+    &--number {
+      width: 36px;
+      height: 36px;
+      @include flex-center;
+      border-radius: 50%;
+      background-color: white;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      flex-shrink: 0;
+    }
+    &--content {
+      margin: 0;
+      max-width: 300px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      @include laptop-min {
+        max-width: 520px;
+      }
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
+  &__slider-nav {
+    display: none;
+    margin-top: 30px;
+    @include mobile {
+      @include flex-center;
+      gap: 16px;
+    }
+  }
+}
